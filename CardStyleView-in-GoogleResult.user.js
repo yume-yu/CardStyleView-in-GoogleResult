@@ -3,14 +3,14 @@
 // @namespace    https://twitter.com/yume_yu
 // @homepage     https://gist.github.com/yume-yu/0381656dab58175ec64527f04397479c
 // @supportURL   https://twitter.com/yume_yu
-// @version      0.5
+// @version      0.5.1
 // @description  This scripts add cardView to your GoogleSearchResult.
 // @author       @yume_yu
 // @match        https://www.google.com/search*
 // @match        https://www.google.co.jp/search*
 // @grant        none
-// @updateURL    https://raw.githubusercontent.com/yume-yu/CardStyleView_inGoogleResult/master/CardStyleView_inGoogleResult.user.js
-// @downloadURL    https://raw.githubusercontent.com/yume-yu/CardStyleView_inGoogleResult/master/CardStyleView_inGoogleResult.user.js
+// @updateURL    https://github.com/yume-yu/CardStyleView-in-GoogleResult/raw/master/CardStyleView-in-GoogleResult.user.js
+// @downloadURL  https://raw.githubusercontent.com/yume-yu/CardStyleView_inGoogleResult/master/CardStyleView_inGoogleResult.user.js
 // ==/UserScript==
 
 (function() {
