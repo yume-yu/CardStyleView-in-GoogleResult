@@ -10,7 +10,7 @@
 // @match        https://www.google.co.jp/search*
 // @grant        none
 // @updateURL    https://github.com/yume-yu/CardStyleView-in-GoogleResult/raw/master/CardStyleView-in-GoogleResult.user.js
-// @downloadURL  https://raw.githubusercontent.com/yume-yu/CardStyleView_inGoogleResult/master/CardStyleView_inGoogleResult.user.js
+// @downloadURL  https://github.com/yume-yu/CardStyleView-in-GoogleResult/raw/master/CardStyleView-in-GoogleResult.user.js
 // ==/UserScript==
 
 (function() {
