@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Card style View in Google result
 // @namespace    https://twitter.com/yume_yu
-// @homepage     https://gist.github.com/yume-yu/0381656dab58175ec64527f04397479c
+// @homepage     https://github.com/yume-yu/CardStyleView-in-GoogleResult
 // @supportURL   https://twitter.com/yume_yu
 // @version      0.5.1
 // @description  This scripts add cardView to your GoogleSearchResult.
