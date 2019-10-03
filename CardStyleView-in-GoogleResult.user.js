@@ -135,6 +135,9 @@ overflow:auto;\
 .exp-outline {\
     display: none;\
 }\
+.ellip {\
+  white-space:normal;\
+}\
 \
 }';
         var css = css_before + cardWidth + css_after;
