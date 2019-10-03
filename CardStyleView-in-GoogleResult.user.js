@@ -3,7 +3,7 @@
 // @namespace    https://twitter.com/yume_yu
 // @homepage     https://github.com/yume-yu/CardStyleView-in-GoogleResult
 // @supportURL   https://twitter.com/yume_yu
-// @version      0.5.1
+// @version      0.5.2
 // @description  This scripts add cardView to your GoogleSearchResult.
 // @author       @yume_yu
 // @match        https://www.google.com/search*
