@@ -3,7 +3,7 @@
 // @namespace    https://twitter.com/yume_yu
 // @homepage     https://github.com/yume-yu/CardStyleView-in-GoogleResult
 // @supportURL   https://twitter.com/yume_yu
-// @version      0.5.3
+// @version      0.5.4
 // @description  This scripts add cardView to your GoogleSearchResult.
 // @author       @yume_yu
 // @match        https://www.google.com/search*
@@ -137,6 +137,9 @@ overflow:auto;\
   white-space:normal;\
 }\
 \
+div.r {\
+  white-space:normal !important;\
+}\
 /* 翻訳カード表示崩れ対策 */ \
 .vk_c {\
   margin : 0;\
