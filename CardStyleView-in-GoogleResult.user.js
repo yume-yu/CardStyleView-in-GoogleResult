@@ -3,7 +3,7 @@
 // @namespace    https://twitter.com/yume_yu
 // @homepage     https://github.com/yume-yu/CardStyleView-in-GoogleResult
 // @supportURL   https://twitter.com/yume_yu
-// @version      0.5.4
+// @version      0.5.5
 // @description  This scripts add cardView to your GoogleSearchResult.
 // @author       @yume_yu
 // @match        https://www.google.com/search*
@@ -253,8 +253,6 @@ div.r {\
         for(buttonstyleKey in buttonStyle){
             size_button.style[buttonstyleKey] = buttonStyle[buttonstyleKey];
         }
-        size_button.style["left"] =  "937px";
-        size_button.style["width"] =  "150px";
         size_button.style["background-color"] = "rgba(0,0,0,0)"
         var select = document.createElement("select");
         select.id = "widthMode"
@@ -295,12 +293,10 @@ div.r {\
             document.getElementById("cardstyle").textContent = css;
             localStorage.setItem("widthValue",widthValues[document.getElementById("widthMode").value]);
         },false)
-        var sub = document.getElementById("ab_options").parentNode;
+        let sub = document.getElementById("hdtb-msb");
         sub.append(" /  Size:")
         sub.append(select)
-        //size_button.append(select);
-        //main.append(size_button);
-        //
+
         if (defaultmode == "card"){
             var invisible = document.createElement("style");
             invisible.id = "invisible";
