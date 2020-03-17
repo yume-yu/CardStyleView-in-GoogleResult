@@ -3,7 +3,7 @@
 // @namespace    https://twitter.com/yume_yu
 // @homepage     https://github.com/yume-yu/CardStyleView-in-GoogleResult
 // @supportURL   https://twitter.com/yume_yu
-// @version      0.5.5
+// @version      0.5.6
 // @description  This scripts add cardView to your GoogleSearchResult.
 // @author       @yume_yu
 // @match        https://www.google.com/search*
@@ -14,7 +14,7 @@
 // ==/UserScript==
 
 (function() {
-    var invisibleStyleStr = ".invisible { display:none;}"
+    var invisibleStyleStr = ".invisible { display:none !important;}"
     var widthValues = {
             "Origin * 2/3":"592px * 2/3",
             "Origin * 1/2":"592px * 1/2",
@@ -217,19 +217,11 @@ div.r {\
                 if(document.getElementsByClassName("cardList").length == 0){
                     var nodeItems = document.querySelectorAll('.g')
                     var items = [...nodeItems]
-                    var cardDiv;// = document.createElement("div");
                     var modelcase = document.getElementById("rso");
-                    for(var i in modelcase.children){
-                        if(modelcase.children[i].getElementsByClassName("srg").length != 0){
-                            cardDiv = modelcase.children[i].cloneNode(true);
-                            break;
-                        }
-                    }
-                    cardDiv.getElementsByClassName("srg")[0].textContent = "";
+                    var cardDiv = modelcase.getElementsByClassName("srg")[0].cloneNode(true);
                     for(var item in items){
-                        cardDiv.getElementsByClassName("srg")[0].append(items[item].cloneNode(true));
+                        cardDiv.append(items[item].cloneNode(true));
                     }
-
                     cardDiv.className += " cardList invisible"
                     document.getElementById("rso").insertBefore(cardDiv,document.getElementById("rso").firstChild)
                 }
@@ -300,31 +292,24 @@ div.r {\
         if (defaultmode == "card"){
             var invisible = document.createElement("style");
             invisible.id = "invisible";
-             invisible.textContent =  invisibleStyleStr;
-            //invisible.textContent = ".invisible { display:none;}";
+            invisible.textContent =  invisibleStyleStr;
+
             var style = document.createElement("style");
             style.id = "cardstyle";
             style.textContent = css;
             var center_col = document.getElementById("center_col");
             var body = document.getElementsByTagName("body")[0];
             var child = center_col.firstElementChild;
-            body.appendChild(invisible);
             body.appendChild(style);
+             body.appendChild(invisible);
             document.getElementById("switch").firstChild.textContent="toListStyle";
             if(document.getElementsByClassName("cardList").length == 0){
                 var nodeItems = document.querySelectorAll('.g')
                 var items = [...nodeItems]
-                var cardDiv;// = document.createElement("div");
                 var modelcase = document.getElementById("rso");
-                for(var i in modelcase.children){
-                    if(modelcase.children[i].getElementsByClassName("srg").length != 0){
-                        cardDiv = modelcase.children[i].cloneNode(true);
-                        break;
-                    }
-                }
-                cardDiv.getElementsByClassName("srg")[0].textContent = "";
+                var cardDiv = modelcase.getElementsByClassName("srg")[0].cloneNode(true);
                 for(var item in items){
-                    cardDiv.getElementsByClassName("srg")[0].append(items[item].cloneNode(true));
+                    cardDiv.append(items[item].cloneNode(true));
                 }
 
                 cardDiv.className += " cardList invisible"
