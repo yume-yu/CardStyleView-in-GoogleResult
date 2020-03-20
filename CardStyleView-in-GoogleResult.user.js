@@ -3,7 +3,7 @@
 // @namespace    https://twitter.com/yume_yu
 // @homepage     https://github.com/yume-yu/CardStyleView-in-GoogleResult
 // @supportURL   https://twitter.com/yume_yu
-// @version      0.5.6
+// @version      0.5.7
 // @description  This scripts add cardView to your GoogleSearchResult.
 // @author       @yume_yu
 // @match        https://www.google.com/search*
@@ -38,7 +38,6 @@
         if(typeof cardWidth == "undefined"){
             localStorage.setItem("widthValue",widthValues["original * 2/3"]);
             cardWidth = widthValues["original * 2/3"];
-            console.log("none")
         }
         var css_before =  ' .mw {\
 max-width:none;\
@@ -84,7 +83,7 @@ display:none;\
 line-height: 1.6;\
 text-align: left;\
 padding: 3%;\
-/*width: 22%;*/\
+width: 100%;\
 border: 1px solid gray;\
 border-radius: 1rem;\
 box-shadow: 5px 5px 5px 1px rgba(200, 200, 200, 0.8);\
@@ -164,7 +163,7 @@ div.r {\
             textAlign:"center",
             borderRadius: "2rem",
             //top: "20px",
-            left: "807px"
+            left: "864px"
         }
         for(var buttonstyleKey in buttonStyle){
             button.style[buttonstyleKey] = buttonStyle[buttonstyleKey];
