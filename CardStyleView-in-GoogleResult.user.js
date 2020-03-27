@@ -3,7 +3,7 @@
 // @namespace    https://twitter.com/yume_yu
 // @homepage     https://github.com/yume-yu/CardStyleView-in-GoogleResult
 // @supportURL   https://twitter.com/yume_yu
-// @version      0.5.7
+// @version      0.5.8
 // @description  This scripts add cardView to your GoogleSearchResult.
 // @author       @yume_yu
 // @match        https://www.google.com/search*
@@ -217,12 +217,14 @@ div.r {\
                     var nodeItems = document.querySelectorAll('.g')
                     var items = [...nodeItems]
                     var modelcase = document.getElementById("rso");
-                    var cardDiv = modelcase.getElementsByClassName("srg")[0].cloneNode(true);
+                    var cardDiv = modelcase.cloneNode(true);
+                    cardDiv.removeAttribute('id');
+                    cardDiv.setAttribute("class","srg");
                     for(var item in items){
                         cardDiv.append(items[item].cloneNode(true));
                     }
                     cardDiv.className += " cardList invisible"
-                    document.getElementById("rso").insertBefore(cardDiv,document.getElementById("rso").firstChild)
+                    modelcase.insertBefore(cardDiv,modelcase.firstChild)
                 }
                 for(g in [...Array(document.getElementById("rso").children.length).keys()]){
                     try{
@@ -306,7 +308,9 @@ div.r {\
                 var nodeItems = document.querySelectorAll('.g')
                 var items = [...nodeItems]
                 var modelcase = document.getElementById("rso");
-                var cardDiv = modelcase.getElementsByClassName("srg")[0].cloneNode(true);
+                var cardDiv = modelcase.cloneNode(true);
+                cardDiv.removeAttribute('id');
+                cardDiv.setAttribute("class","srg");
                 for(var item in items){
                     cardDiv.append(items[item].cloneNode(true));
                 }
